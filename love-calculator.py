@@ -2,6 +2,7 @@ print("Welcome to love calculator\n")
 
 name1 = input("What is your name?\n").lower()
 name2 = input("What is their name?\n").lower()
+
 score1 = 0
 score2 = 0
 
@@ -25,8 +26,17 @@ score1 = str(score1)
 score2 = str(score2)
 
 # Concatenate scores variables
-porcentage =  score1 + score2
+final_score =  int(score1 + score2)
 
-print(f"You are {porcentage}% compatible")
+msg_output = f"Your score is {final_score}"
+
+if final_score < 10 or final_score > 90 :
+    print(f"{msg_output}, you go together like coke and mentos.")
+
+elif final_score >= 40 and final_score <= 50 :
+    print(f"{msg_output}, you are alright together.")
+
+else :
+    print(f"{msg_output}.")
 
 
